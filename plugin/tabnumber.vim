@@ -1,6 +1,7 @@
 "tab number
 set tabline=%!TabLine()  " custom tab pages line
 
+if !exists("*TabLine")
 function TabLine()
     let s = '' " complete tabline goes here
     " loop through each tab page
@@ -70,3 +71,4 @@ function TabLine()
     endif
     return s
 endfunction
+endif
